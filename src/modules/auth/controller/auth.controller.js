@@ -15,7 +15,7 @@ export const githubCallback = (req, res, next) => {
     }
  
     try {
-      // Firma el JWT
+      
       const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: "1d" });
  
       // Enviar cookie segura
