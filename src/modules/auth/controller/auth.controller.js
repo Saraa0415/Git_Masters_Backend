@@ -5,7 +5,6 @@ import { PrismaClient } from "@prisma/client";
  
 const prisma = new PrismaClient();
  
-// 🔐 Iniciar autenticación con GitHub
 export const loginWithGitHub = passport.authenticate("github", { scope: ["user:email"] });
  
 // 🔁 Callback de GitHub (Passport ya autenticó y puso req.user)
